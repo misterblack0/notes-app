@@ -1,0 +1,248 @@
+html,
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #364f6b;
+  margin: 5rem 3rem;
+  background: #dbedf3;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  border-radius: 0.5rem;
+}
+
+#addBtn {
+  padding: 2rem 10rem 1.8rem 10rem;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: #ff5555;
+  border-radius: 1rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  border: 0;
+  margin-top: 2rem;
+}
+
+#addBtn:hover {
+  background: #e03a3a;
+}
+
+#addBtn:active {
+  transform: scale(1.025);
+}
+
+#notes {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.note {
+  width: 24rem;
+  height: 20rem;
+  font-size: 1.4rem;
+  background: #fff;
+  border-radius: 0.4rem;
+  padding: 1.8rem 1.6rem;
+  margin: 2.4rem 2.4rem 0 0;
+  box-shadow: 0.9rem 0.9rem 1.2rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note-text {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.note-delete {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 0.2rem;
+  right: 0.2rem;
+  border-radius: 0.4rem;
+  color: #999;
+  text-align: center;
+}
+
+.note-delete:hover {
+  color: #333;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.note-timestamp {
+  font-size: 1.1rem;
+  font-weight: 300;
+  position: absolute;
+  width: 90%;
+  height: 1.3rem;
+  bottom: 0.4rem;
+  color: #424242;
+  text-align: center;
+}
+
+.note.white {
+  background-color: #fff;
+}
+
+.note.red {
+  background-color: #ffc8c8;
+}
+
+.note.blue {
+  background-color: #a6e3e9;
+}
+
+.note.green {
+  background-color: #95e1d3;
+}
+
+.note.yellow {
+  background-color: #fefdca;
+}
+
+.note.orange {
+  background-color: #fdb398;
+}
+
+.note.violet {
+  background-color: #d1aad8;
+}
+
+.note.indigo {
+  background-color: #a6b3ff;
+}
+
+.colorPicker {
+  margin-top: 1em;
+  font-size: 0.875em;
+  text-align: center;
+  display: inline-table;
+  width: 100%;
+  max-width: 40em;
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 0.35em;
+  box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.15);
+}
+.colorPicker label {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: table-cell;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+  letter-spacing: -0.5em;
+  color: transparent;
+  opacity: 0.35;
+  width: 1%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0.1)),
+    to(rgba(0, 0, 0, 0.1))
+  );
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.colorPicker label.white {
+  background-color: #fff;
+  -webkit-tap-highlight-color: #fff;
+}
+.colorPicker label.red {
+  background-color: #ffc8c8;
+  -webkit-tap-highlight-color: #ffc8c8;
+}
+.colorPicker label.orange {
+  background-color: #ff9d7a;
+  -webkit-tap-highlight-color: #ff9d7a;
+}
+.colorPicker label.yellow {
+  background-color: #fefdca;
+  -webkit-tap-highlight-color: #fefdca;
+}
+.colorPicker label.green {
+  background-color: #95e1d3;
+  -webkit-tap-highlight-color: #95e1d3;
+}
+.colorPicker label.blue {
+  background-color: #a6e3e9;
+  -webkit-tap-highlight-color: #a6e3e9;
+}
+.colorPicker label.indigo {
+  background-color: #8c9eff;
+  -webkit-tap-highlight-color: #8c9eff;
+}
+.colorPicker label.violet {
+  background-color: #ce93d8;
+  -webkit-tap-highlight-color: #ce93d8;
+}
+.colorPicker label:first-of-type {
+  border-radius: 0.25em 0 0 0.25em;
+}
+.colorPicker label:last-of-type {
+  border-radius: 0 0.25em 0.25em 0;
+}
+.colorPicker label:hover {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: normal;
+}
+.colorPicker input {
+  display: none;
+}
+.colorPicker input:checked + label {
+  width: 10%;
+  opacity: 1;
+}
+
+label {
+  height: 2rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 0.4rem;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  background-color: #808080;
+}
