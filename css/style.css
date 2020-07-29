@@ -42,6 +42,7 @@ textarea {
   cursor: pointer;
   border: 0;
   margin-top: 2rem;
+  outline: none;
 }
 
 #addBtn:hover {
