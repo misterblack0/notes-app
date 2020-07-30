@@ -15,7 +15,7 @@ for (const input of inputs) {
   });
 }
 
-function addNote() {
+const addNote = () => {
   let text = form.noteText.value;
   let d = new Date();
   let currentTime = d.toLocaleTimeString();
@@ -36,19 +36,19 @@ function addNote() {
   form.noteText.focus();
 
   addListenerDeleteBtn(deleteBtn);
-}
+};
 
-function addListenerDeleteBtn(deleteBtn) {
+const addListenerDeleteBtn = (deleteBtn) => {
   deleteBtn.addEventListener("click", function (e) {
     e.stopPropagation();
     deleteNote(e);
   });
-}
+};
 
-function deleteNote(e) {
+const deleteNote = (e) => {
   let eventNote = e.target.parentNode;
   eventNote.parentNode.removeChild(eventNote);
-}
+};
 
 form.addBtn.addEventListener("click", function (e) {
   e.preventDefault();
