@@ -16,11 +16,11 @@ for (const input of inputs) {
 }
 
 const addNote = () => {
+  const note = document.createElement("div");
+  const deleteBtn = document.createElement("span");
   let text = form.noteText.value;
   let d = new Date();
   let currentTime = d.toLocaleTimeString();
-  let note = document.createElement("div");
-  let deleteBtn = document.createElement("span");
 
   note.classList.add("note");
   note.classList.add(selectedColor);
@@ -39,7 +39,7 @@ const addNote = () => {
 };
 
 const addListenerDeleteBtn = (deleteBtn) => {
-  deleteBtn.addEventListener("click", function (e) {
+  deleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     deleteNote(e);
   });
@@ -50,7 +50,7 @@ const deleteNote = (e) => {
   eventNote.parentNode.removeChild(eventNote);
 };
 
-form.addBtn.addEventListener("click", function (e) {
+form.addBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (form.noteText.value != "") {
     addNote();
